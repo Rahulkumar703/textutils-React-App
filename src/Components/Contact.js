@@ -11,11 +11,11 @@ export default function Contact(props) {
             <div className="contact-content">
                 <div className="contact-method">
                     <p className="sub-heading">Phone</p>
-                    <a target="_blank" href="tel:+917050584103">+91 7050584103</a>
+                    <a target="_blank" href="tel:+917050584103" rel="noreferrer">+91 7050584103</a>
                 </div>
                 <div className="contact-method">
                     <p className="sub-heading">Email</p>
-                    <a target="_blank" href="mailto:rahulkumar703@outlook.com">rahulkumar703@outlook.com</a>
+                    <a target="_blank" href="mailto:rahulkumar703@outlook.com" rel="noreferrer">rahulkumar703@outlook.com</a>
                 </div>
             </div>
         </div>

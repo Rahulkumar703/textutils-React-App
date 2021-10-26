@@ -4,7 +4,7 @@ import Form from './Components/Form';
 import React, { useState } from 'react'
 import About from './Components/About';
 import Contact from './Components/Contact';
-import { BrowserRouter as Router, Route, Switch} from 'react-router-dom'
+import { HashRouter as Router, Route, Switch} from 'react-router-dom'
 
 
 

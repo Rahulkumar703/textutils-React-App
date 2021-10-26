@@ -113,6 +113,7 @@
 {
     width: 80%;
     display: flex;
+    margin-bottom: 1rem;
 }
 .find-and-replace-box .input-box
 {

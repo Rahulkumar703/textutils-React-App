@@ -5,6 +5,7 @@ import './Css/form.css';
 
 function Form(props) {
 
+    window.title = "Text Utils | Home";
     const [text, setText] = useState('');
     const [farBox, setFarBox] = useState(false);
     const [searchInput, setSearchInput] = useState({searchFor: '', replaceWith: ''});

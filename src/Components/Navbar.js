@@ -1,6 +1,7 @@
 import React from 'react';
 import './Css/navbar.css';
 import PropTypes from 'prop-types'
+import { Link } from 'react-router-dom';
 
 
 function Navbar(props) {
@@ -8,13 +9,13 @@ function Navbar(props) {
         <nav className={props.theme} >
             <div className="title">
                 <h1>
-                    <a href="/">{props.title}</a>
+                    <Link to="/">{props.title}</Link>
                 </h1>
             </div>
             <ul className="nav-tabs">
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#contact">Contact</a></li>
+                <li><Link to="/">Home</Link></li>
+                <li><Link to="/about">About</Link></li>
+                <li><Link to="/contact">Contact</Link></li>
             </ul>
             <div className="theme">
                 <label htmlFor='theme-selector'>{`Enable ${props.theme === 'light' ? 'dark' : 'light'} Mode`}</label>

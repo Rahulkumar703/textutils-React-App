@@ -3,6 +3,9 @@ import Navbar from './Components/Navbar';
 import Form from './Components/Form';
 import React, { useState } from 'react'
 import About from './Components/About';
+import Contact from './Components/Contact';
+import { BrowserRouter as Router, Route, Switch} from 'react-router-dom'
+
 
 
 function App() {
@@ -23,9 +26,26 @@ function App() {
 
   return (
    <>
-    <Navbar title="Text Utils" theme={themeMode} changetheme={changeTheme}/>
-    <Form theme={themeMode} />
-    <About theme={themeMode} />
+   <Router>
+      <Navbar title="Text Utils" theme={themeMode} changetheme={changeTheme}/>
+
+      <Switch>
+
+        <Route exact path="/">
+          <Form theme={themeMode} />
+        </Route>
+
+        <Route exact path="/about">
+          <About theme={themeMode} />
+        </Route>
+
+        <Route exact path="/contact">
+          <Contact theme={themeMode} />
+        </Route>
+
+      </Switch>
+
+   </Router>
    </>
   );
 }

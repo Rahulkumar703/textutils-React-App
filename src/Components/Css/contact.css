@@ -1,0 +1,54 @@
+.contact-section
+{
+    width: 80%;
+    height: auto;
+    margin: 2rem 10%;
+    padding: 1rem;
+    align-self: center;
+    display: flex;
+    flex-direction: column;
+}
+.heading
+{
+    margin: 2rem 0;
+    font-size: 1.7rem;
+}
+.contact-content
+{
+    padding: 1rem 2rem;
+}
+.contact-content .contact-method
+{
+    margin: 3rem 0;
+    padding: 1rem;
+    border-radius: .5rem;
+}
+
+.contact-section.dark .contact-content .contact-method
+{
+    background: var(--deep-dark);
+}
+.contact-section.light .contact-content .contact-method
+{
+    background: var(--deep-light);
+}
+.contact-content .sub-heading
+{
+    font-size: 1.8rem;
+    margin: .5rem 0;
+    font-weight: bold;
+    color: var(--primary);
+}
+.contact-section.light .contact-content a
+{
+    color: var(--dark-text);
+}
+.contact-section.dark .contact-content a
+{
+    color: var(--light-text);
+}
+.contact-content a
+{
+    font-size: 1.6rem;
+    margin-left: 2rem;
+}

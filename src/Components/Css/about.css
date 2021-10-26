@@ -1,0 +1,70 @@
+.about-section
+{
+    width: 80%;
+    height: auto;
+    margin: 2rem 10%;
+    padding: 1rem;
+    align-self: center;
+    display: flex;
+    flex-direction: column;
+}
+.heading
+{
+    margin: 2rem 0;
+    font-size: 1.7rem;
+}
+.about-content
+{
+    padding: 1rem 2rem;
+}
+.about-content .sub-heading
+{
+    font-size: 1.6rem;
+    margin: .5rem 0;
+}
+.about-content .sub-heading span
+{
+    font-weight: bold;
+    color: var(--primary);
+}
+.about-content ol
+{
+    margin: 1rem 0 0 2rem;
+}
+.about-section.light .about-content .tasks
+{
+    background: var(--deep-light);
+}
+.about-section.dark .about-content .tasks
+{
+    background: var(--deep-dark);
+}
+.about-content .tasks
+{
+    padding: .2rem 3rem;
+    margin: 1rem 0;
+    border-radius: .5rem;
+}
+.about-content .tasks li
+{
+    color: var(--primary);
+    font-weight: bold;
+    font-size: 1.5rem;
+    margin-top: 1rem;
+}
+.about-content .tasks p
+{
+    font-size: 1.5rem;
+    margin-bottom: .5rem;
+}
+.about-content .tasks .example
+{
+    margin: 1rem 0 1rem 1rem;
+}
+.about-content .tasks .example p span
+{
+    background: var(--light-blue); 
+    border-radius: .5rem;
+    padding: 0 .5rem;
+    color: var(--dark-text);
+}

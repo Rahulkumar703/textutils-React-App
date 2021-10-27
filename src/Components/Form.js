@@ -40,7 +40,13 @@ function Form(props) {
     }
 
     function capitalize() {
+        if(text.trim() !== '')
+        {
+            let words = text.trim().split(/[ ]+/);
+            words = words.map(word => word.at(0).toUpperCase() + word.substr(1).toLocaleLowerCase()).join(' ');
 
+            setText(words);
+        }
     }
 
     function selectAndCopy() {
@@ -57,7 +63,6 @@ function Form(props) {
     function showFindReplaceBox() {
         setFarBox(!farBox)
     }
-
     function replace() {
         const searchedWord = searchInput.searchFor;
         if(text.includes(searchedWord))
@@ -74,8 +79,10 @@ function Form(props) {
     }
 
     function minify() {
-        let newText = text.trim().split(/[ ]+/).join(" ").split('\n').join('');
-        setText(newText);
+        const p = document.createElement('p');
+        p.innerText = text.trim().split(/[ ]+/).join(" ");
+
+        setText(p.innerText);
     }
 
     function paste() {
@@ -133,11 +140,15 @@ function Form(props) {
             {farBox ? <div className="find-and-replace-box">
                 <div className="input-box">
                     <input type="text" id="find" placeholder="Search for" value={searchInput.searchFor} onChange={(e)=>{handleSearchOnChange(e, 'searchFor')}}/>
-                    <input type="text" id="find" placeholder="Replace with" value={searchInput.replaceWith} onChange={(e)=>{handleSearchOnChange(e, 'replaceWith')}}/>
+                    <div className="button-box">
+                        <button className="btn-blue" onClick={replace}>Replace</button>
+                    </div>
                 </div>
-                <div className="replace-btn">
-                    <button onClick={replace}>Replace One</button>
-                    <button onClick={replaceAll}>Replace All</button>
+                <div className="input-box">
+                    <input type="text" id="replace" placeholder="Replace with" value={searchInput.replaceWith} onChange={(e)=>{handleSearchOnChange(e, 'replaceWith')}}/>
+                    <div className="button-box">
+                        <button className="btn-red" onClick={replaceAll}>Replace All</button>
+                    </div>
                 </div>
             </div> : ''}
 

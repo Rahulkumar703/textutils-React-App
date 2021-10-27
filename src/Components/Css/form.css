@@ -16,7 +16,7 @@
     width: 80%;
     margin-bottom: 3rem;
 }
-.text-field-box textarea
+.text-field-box #text--field
 {
     width: 100%;
     height: auto;
@@ -26,12 +26,12 @@
     font-size: 1.6rem;
     font-family: monospace;
 }
-.form.light .text-field-box textarea
+.form.light .text-field-box #text--field
 {
     background: var(--deep-light);
     color: var(--dark-text);
 }
-.form.dark .text-field-box textarea
+.form.dark .text-field-box #text--field
 {
     background: var(--deep-dark);
     color: var(--light-text);
@@ -113,51 +113,80 @@
 {
     width: 80%;
     display: flex;
+    flex-direction: column;
     margin-bottom: 1rem;
+    padding: 1rem;
+    border-radius: 1rem;
+}
+.form.dark .find-and-replace-box
+{
+    background: var(--deep-dark);
+}
+.form.light .find-and-replace-box
+{
+    background: var(--deep-light);
 }
 .find-and-replace-box .input-box
 {
-    flex: 1;
+    width: 100%;
+    height: auto;
     display: flex;
-    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    margin: .5rem 0;
 }
-.find-and-replace-box .input-box input,
-.find-and-replace-box .replace-btn button
+.find-and-replace-box .input-box input
 {
     margin: .5rem 0;
-    width: 80%;
+    width: 60%;
+    min-width: 15rem;
     padding: .5rem;
+    border-radius: .5rem;
+    border: .2rem solid transparent;
 }
-.find-and-replace-box .replace-btn
+.find-and-replace-box .input-box:first-child input
 {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
+    border-color: var(--light-blue);
 }
-.find-and-replace-box .replace-btn button
+.find-and-replace-box .input-box:last-child input
+{
+    border-color: var(--light-red);
+}
+.find-and-replace-box .button-box
+{
+    /* width: 40%; */
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+.find-and-replace-box .button-box button
 {
     align-self: flex-end;
     cursor: pointer;
+    padding: .5rem;
     border: .2rem solid transparent;
+    border-radius: .5rem;
     color: var(--light);
     font-weight: bold;
     transition: .3s;
+    margin: 0 1rem;
 }
-.find-and-replace-box .replace-btn button:first-child
+.find-and-replace-box .button-box button.btn-blue
 {
     background: var(--blue);
     border-color: var(--light-blue);
 }
-.find-and-replace-box .replace-btn button:last-child
+.find-and-replace-box .button-box button.btn-red
 {
     background: var(--red);
     border-color: var(--light-red);
 }
-.find-and-replace-box .replace-btn button:first-child:hover
+.find-and-replace-box .button-box button.btn-blue:hover
 {
     background: var(--dark-blue);
 }
-.find-and-replace-box .replace-btn button:last-child:hover
+.find-and-replace-box .button-box button.btn-red:hover
 {
     background: var(--dark-red);
 }
@@ -169,7 +198,6 @@
     max-height: 30rem;
     display: flex;
     flex-direction: column;
-    align-items: left;
     padding: 1rem;
     padding-top: 0;
     margin-bottom: 1rem;

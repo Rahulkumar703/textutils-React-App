@@ -34,7 +34,7 @@ export default function About(props) {
                         </div>
                     </div>
                     <div className="tasks">
-                        <strike><li>Capitalize each words</li></strike>
+                        <li>Capitalize each words</li>
                         <p>
                             This can convert first letter to Capital of every single word.
                         </p>
